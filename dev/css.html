@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style type="text/css">
+	#preview {
+		background: url(back.jpg) no-repeat left top;
+		position: relative;
+		width: 600px;
+		height: 450px;
+	}
+	.image {
+	        position: absolute;
+	    left: 127px;
+	    top: 54px;
+	    width: 150px;
+	    -webkit-transform: perspective(2200px) rotateX(34deg) rotateY(21deg) rotateZ(-29deg);
+	    -moz-transform: perspective(2200px) rotateX(34deg) rotateY(21deg) rotateZ(-29deg);
+	    transform: perspective(2200px) rotateX(34deg) rotateY(21deg) rotateZ(-29deg);
+	    height: 307px;
+	    overflow: hidden;
+	}
+	.image img {
+		width: 100%;
+	}
+</style>
+</head>
+<body>
+
+
+<div id="preview">
+	<div class="image">
+		<img src="sample.png">
+	</div>
+</div>
+
+</body>
+</html>

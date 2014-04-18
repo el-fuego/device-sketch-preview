@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<canvas id="canvas1" width="1200" height="1000"></canvas>
+
+	<script type="text/javascript">
+
+
+	function keystoneAndDisplayImageH(ctx, img, scalingFactor, numSlices) {
+	    var h = img.height, w = img.width,
+	     
+	    // how much should every slice be scaled in width?
+	    widthScale = (1 - scalingFactor) / numSlices;
+	     
+	    // height of each slice
+	    sliceHeight = h / numSlices;
+	     
+	    // iterate over all slices      
+	    for (var n = 0; n < numSlices; n++) {
+	         
+	        // source - where to take the slices from
+	        var sx = 0,
+	            sy = sliceHeight * n,
+	            sWidth = w,
+	            sHeight = sliceHeight;
+	        // destination - where to draw the new slices
+	        var dx = (w * widthScale * (numSlices - n)) / 2,
+	            dy = sliceHeight * n,
+	            dWidth =  w * (1 - (widthScale * (numSlices - n))),
+	            dHeight = sliceHeight;
+	        ctx.drawImage(img, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
+	    }
+	}
+
+
+	var context = canvas1.getContext("2d");
+	var img = new Image();
+	img.src = "back.jpg";
+	   
+	img.onload = function() {
+	    // translate the image so it doesn't get chopped off by the canvas height
+	    context.translate(0, 120);
+	    context.rotate(20*Math.PI/180);
+	    // rotate and keystone image
+	    keystoneAndDisplayImageH(context, img, 0.2, img.height);
+
+	    context.restore();
+	}
+
+</script>
+</body>
+</html>

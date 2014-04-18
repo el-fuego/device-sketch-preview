@@ -1,0 +1,88 @@
+body
+	font-size 16px
+	line-height 18px
+	font-family Arial
+
+#dropZone
+	position absolute
+	left 0
+	top 0
+	bottom 0
+	right 0
+
+
+.background
+	position absolute
+	left 50%
+	top 50% 
+	width 600px
+	height 450px
+	margin-left -300px
+	margin-top -225px
+
+	background url(back.jpg) no-repeat left top
+
+
+	#preview
+		display none
+
+	.image,
+	#dropBlock
+		position absolute
+		left 127px
+		top 54px
+		width 150px
+		-webkit-transform perspective(2200px) rotateX(34deg) rotateY(21deg) rotateZ(-29deg)
+		-moz-transform perspective(2200px) rotateX(34deg) rotateY(21deg) rotateZ(-29deg)
+		transform perspective(2200px) rotateX(34deg) rotateY(21deg) rotateZ(-29deg)
+		height 307px
+		overflow hidden
+
+
+		img
+			width 100%
+
+
+	.download
+		position absolute
+		right 22px
+		top 22px
+		border-radius 5px
+		color #fff
+		background #3289CD
+
+		font-size 22px
+		text-decoration none
+		text-transform uppercase
+		font-weight bold
+		line-height 72px
+		padding 0 54px
+
+		&:hover
+			background #2FB073
+
+		&:before
+			content '⇓'
+
+		span
+			position absolute
+			right  10px
+			top 10px
+			font-size 14px
+			line-height 18px
+
+
+#dropBlock
+	box-sizing border-box
+	padding-top 70px
+	color #fff
+	font-size 36px
+	line-height 45px
+	text-align center
+
+	background #294252
+	opacity 0.9
+
+
+	.hover
+		background #905E79

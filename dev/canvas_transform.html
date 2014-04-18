@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<script src="perspective.js"></script>
+<script>
+	sourceImagePath = 'sample.png';
+	antialias =       'none'; // subpixel grey none default
+	patternQuality =  'fast'; // fast good best nearest bilinear
+</script>
+<script src="editor.js"></script>
+<style type="text/css">
+	#preview {
+		background: url(back.jpg) no-repeat left top;
+		position: relative;
+	}
+	#transformPoints {
+		margin: 18px;
+	}
+</style>
+
+</head>
+<body>
+
+<div id="transformPoints">194,69 71,98 210,357 333,317</div>
+
+<div id="preview">
+	<canvas width="1200" height="1000" id="canvas"></canvas>
+</div>
+
+</body>
+</html>
