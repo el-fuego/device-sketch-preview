@@ -21,13 +21,6 @@ dropZone
 		position absolute
 		left 50%
 		top 50% 
-		width 600px
-		height 450px
-		margin-left -300px
-		margin-top -225px
-
-		background url(back.jpg) no-repeat left top
-
 
 		preview
 			display none
@@ -35,29 +28,21 @@ dropZone
 		.image-container,
 		.drop-block
 			position absolute
-			left 127px
-			top 54px
-			width 150px
-			-webkit-transform perspective(2200px) rotateX(34deg) rotateY(21deg) rotateZ(-29deg)
-			-moz-transform perspective(2200px) rotateX(34deg) rotateY(21deg) rotateZ(-29deg)
-			transform perspective(2200px) rotateX(34deg) rotateY(21deg) rotateZ(-29deg)
-			height 307px
 			overflow hidden
 
 			.hover
 				background #905E79
 
-
 		.drop-block
+			-webkit-box-sizing border-box
+			-moz-box-sizing border-box
 			box-sizing border-box
-			padding-top 70px
 			color #fff
 			font-size 36px
 			line-height 45px
 			text-align center
 
 			background #294252
-			opacity 0.9
 			
 		.image-container
 			img

@@ -1,4 +1,4 @@
-$ ->
+$(window).on 'templatesLoaded', ->
   $('dropZone').each (i, el) ->
     el.ondragover = ->
       $('dropZone').addClass "hover"
