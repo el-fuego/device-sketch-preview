@@ -1,4 +1,9 @@
 device-sketch-preview
 =====================
 
-todo: autobuilding templates without any folders names at styles
+todo: simply add templates
+
+
+run:
+npm install
+grunt
