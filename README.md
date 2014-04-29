@@ -1,9 +1,12 @@
 device-sketch-preview
 =====================
 
-todo: simply add templates
-
-
-run:
+### How to run
+```bash
 npm install
 grunt
+```
+
+### TODO
+simply add templates 
+
